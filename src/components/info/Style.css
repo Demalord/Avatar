@@ -276,12 +276,49 @@
     font-size: 1.1rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+    .c-info-contenido {
+        padding: 8% 4% 110px;
+    }
+
+    .c-info-elementos {
+        gap: 2%;
+        row-gap: 8px;
+    }
+
     .c-info-titulo {
         letter-spacing: 4px;
     }
 
+    .c-info-momo {
+        width: 60%;
+    }
+
     .c-info-momeza {
         letter-spacing: 2px;
+    }
+
+    .c-info-medidor,
+    .c-info-caja {
+        width: 92%;
+        max-width: 92%;
+    }
+
+    .c-info-sol {
+        width: 140%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .c-info-nube.uno {
+        width: 55%;
+    }
+
+    .c-info-nube.dos {
+        width: 75%;
+    }
+
+    .c-info-nube.tres {
+        width: 45%;
     }
 }

@@ -82,26 +82,40 @@
 }
 
 @media (max-width: 600px) {
-    .c-lista {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-        padding: 12px 12px 90px;
-    }
-
-    .c-lista-personaje {
-        padding: 8px;
-    }
-
-    .c-lista-personaje p {
-        font-size: 0.85rem;
-    }
-
-    .c-buscador {
-        width: calc(100% - 24px);
+    .c-filtro {
+        gap: 2%;
+        row-gap: 6px;
+        padding: 0 4%;
     }
 
     .c-filtro button {
         padding: 4px 8px;
         font-size: 0.8rem;
+    }
+
+    .c-buscador {
+        width: 92%;
+    }
+
+    .c-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3%;
+        row-gap: 12px;
+        width: 100%;
+        padding: 3% 4% 90px;
+    }
+
+    .c-lista-personaje {
+        width: 100%;
+        padding: 6%;
+    }
+
+    .c-lista-personaje img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .c-lista-personaje p {
+        font-size: 0.85rem;
     }
 }

@@ -9,3 +9,13 @@
     color: #7a5c3e;
     padding: 20px 16px 90px;
 }
+
+@media (max-width: 600px) {
+    .c-favoritos-titulo {
+        margin: 5% 4% 0;
+    }
+
+    .c-favoritos-vacio {
+        padding: 5% 4% 90px;
+    }
+}
