@@ -8,7 +8,7 @@ function Personaje() {
   const [datapersonaje, setDatapersonaje] = useState(null);
   const [favoritos, setFavoritos] = useState(() => {
     try {
-      return JSON.parse(localStorage.getItem('favoritos') || '[]');
+      return JSON.parse(localStorage.getItem('favoritosAvatar') || '[]');
     } catch {
       return [];
     }
@@ -29,7 +29,7 @@ function Personaje() {
       nuevosFavoritos = [...favoritos, { id: datapersonaje._id, nombre: datapersonaje.name, foto: datapersonaje.photoUrl }];
     }
     setFavoritos(nuevosFavoritos);
-    localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos));
+    localStorage.setItem('favoritosAvatar', JSON.stringify(nuevosFavoritos));
   };
 
   if (!datapersonaje || !datapersonaje._id) return <p>Cargando...</p>;

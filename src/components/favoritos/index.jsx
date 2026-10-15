@@ -6,7 +6,7 @@ function Favoritos() {
   const navigate = useNavigate();
   const [favoritos] = useState(() => {
     try {
-      const guardados = JSON.parse(localStorage.getItem('favoritos') || '[]');
+      const guardados = JSON.parse(localStorage.getItem('favoritosAvatar') || '[]');
       return Array.isArray(guardados) ? guardados.filter(p => p && p.id && p.nombre) : [];
     } catch {
       return [];
