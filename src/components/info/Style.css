@@ -275,3 +275,13 @@
     margin: 8px 0 0;
     font-size: 1.1rem;
 }
+
+@media (max-width: 400px) {
+    .c-info-titulo {
+        letter-spacing: 4px;
+    }
+
+    .c-info-momeza {
+        letter-spacing: 2px;
+    }
+}

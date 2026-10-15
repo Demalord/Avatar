@@ -34,6 +34,7 @@
 
 @media (max-width: 600px) {
     .seleccionado {
+        max-width: min(calc(100% - 24px), 500px);
         padding: 16px;
     }
 }

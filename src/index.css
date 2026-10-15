@@ -7,6 +7,11 @@ body {
     font-family: system-ui, sans-serif;
     background-color: #fdf3e1;
     color: #2b2118;
+    overflow-wrap: anywhere;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 img {

@@ -19,6 +19,7 @@
 
 .coleccion-marcador {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 16px;
@@ -133,6 +134,7 @@
 
 .coleccion-album {
   display: grid;
+  min-width: 0;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
 }
