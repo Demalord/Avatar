@@ -1,0 +1,91 @@
+.c-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    max-width: 900px;
+    margin: 16px auto 0;
+    padding: 0 16px;
+}
+
+.c-filtro button {
+    padding: 6px 10px;
+    border: 2px solid #e8862a;
+    border-radius: 20px;
+    background-color: #1d3557;
+    color: #fdf3e1;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.c-buscador {
+    display: block;
+    width: calc(100% - 32px);
+    max-width: 868px;
+    margin: 16px auto 0;
+    padding: 10px;
+    border: 2px solid #e8862a;
+    border-radius: 20px;
+    background-color: #fffaf0;
+    color: #2b2118;
+    font-size: 1rem;
+}
+
+.c-lista {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px 16px 90px;
+}
+
+.c-lista-personaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fffaf0;
+    border: 2px solid #f2c14e;
+    border-radius: 16px;
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(122, 59, 12, 0.15);
+    transition: transform 0.2s;
+}
+
+.c-lista-personaje:hover {
+    transform: scale(1.05);
+}
+
+.c-lista-personaje img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.c-lista-personaje p {
+    margin: 4px 0;
+    color: #1d3557;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media (max-width: 900px) {
+    .c-lista {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .c-lista {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .c-filtro button {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+}

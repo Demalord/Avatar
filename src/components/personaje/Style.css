@@ -1,0 +1,39 @@
+.seleccionado {
+    text-align: center;
+    background-color: #fffaf0;
+    border: 3px solid #e8862a;
+    box-shadow: 0 6px 16px rgba(122, 59, 12, 0.2);
+    border-radius: 20px;
+    max-width: min(90%, 500px);
+    margin: 20px auto 90px;
+    padding: 20px 40px;
+}
+
+.seleccionado img {
+    max-width: 100%;
+    height: auto;
+}
+
+.seleccionado h1 {
+    text-transform: capitalize;
+    color: #1d3557;
+}
+
+.seleccionado p {
+    color: #2b2118;
+}
+
+.seleccionado button {
+    padding: 8px 20px;
+    border: 2px solid #e8862a;
+    border-radius: 20px;
+    background-color: #1d3557;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .seleccionado {
+        padding: 16px;
+    }
+}

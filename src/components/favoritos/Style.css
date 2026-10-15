@@ -1,0 +1,11 @@
+.c-favoritos-titulo {
+    text-align: center;
+    margin: 20px 16px 0;
+    color: #1d3557;
+}
+
+.c-favoritos-vacio {
+    text-align: center;
+    color: #7a5c3e;
+    padding: 20px 16px 90px;
+}

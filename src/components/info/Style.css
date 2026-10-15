@@ -1,0 +1,277 @@
+.c-info {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0f1b3d 0%, #263d78 28%, #6b5aa3 52%, #d9826a 74%, #f6c27a 100%);
+    color: #fdf3e1;
+}
+
+.c-info-cielo {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.c-info-estrellas {
+    position: absolute;
+    inset: 0 0 50% 0;
+    background-image:
+        radial-gradient(2px 2px at 8% 12%, white, transparent),
+        radial-gradient(1.5px 1.5px at 22% 30%, white, transparent),
+        radial-gradient(2px 2px at 35% 8%, white, transparent),
+        radial-gradient(1.5px 1.5px at 48% 22%, white, transparent),
+        radial-gradient(2px 2px at 63% 14%, white, transparent),
+        radial-gradient(1.5px 1.5px at 77% 34%, white, transparent),
+        radial-gradient(2px 2px at 90% 10%, white, transparent),
+        radial-gradient(1.5px 1.5px at 15% 45%, white, transparent),
+        radial-gradient(1.5px 1.5px at 84% 52%, white, transparent),
+        radial-gradient(2px 2px at 55% 40%, white, transparent);
+    animation: c-info-brillar 4s ease-in-out infinite;
+}
+
+@keyframes c-info-brillar {
+    0%, 100% {
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.c-info-sol {
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+    width: 520px;
+    height: 520px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 228, 160, 0.95) 0%, rgba(255, 180, 100, 0.6) 18%, rgba(255, 140, 90, 0.2) 40%, transparent 65%);
+}
+
+.c-info-nube {
+    position: absolute;
+    height: 60px;
+    border-radius: 60px;
+    background: rgba(255, 240, 230, 0.35);
+    filter: blur(6px);
+    animation: c-info-viento 40s linear infinite;
+}
+
+.c-info-nube.uno {
+    top: 18%;
+    width: 220px;
+    animation-duration: 45s;
+}
+
+.c-info-nube.dos {
+    top: 38%;
+    width: 300px;
+    height: 70px;
+    animation-duration: 60s;
+    animation-delay: -20s;
+}
+
+.c-info-nube.tres {
+    top: 58%;
+    width: 180px;
+    height: 50px;
+    animation-duration: 35s;
+    animation-delay: -10s;
+}
+
+@keyframes c-info-viento {
+    from {
+        left: -320px;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.c-info-montanas {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.c-info-montanas.lejanas {
+    height: 32%;
+    background: #6a4f86;
+    clip-path: polygon(0 60%, 8% 35%, 16% 52%, 26% 18%, 36% 48%, 45% 30%, 55% 55%, 64% 22%, 74% 46%, 84% 28%, 92% 50%, 100% 32%, 100% 100%, 0 100%);
+}
+
+.c-info-montanas.cercanas {
+    height: 22%;
+    background: #2e2346;
+    clip-path: polygon(0 45%, 10% 62%, 20% 30%, 30% 58%, 40% 40%, 50% 66%, 60% 26%, 70% 55%, 80% 38%, 90% 60%, 100% 42%, 100% 100%, 0 100%);
+}
+
+.c-info-contenido {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 16px 110px;
+}
+
+.c-info-elementos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.c-info-elemento {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+}
+
+.c-info-elemento.agua {
+    background-color: #2b7bb9;
+}
+
+.c-info-elemento.tierra {
+    background-color: #4f8a3b;
+}
+
+.c-info-elemento.fuego {
+    background-color: #c0392b;
+}
+
+.c-info-elemento.aire {
+    background-color: #e8a33a;
+}
+
+.c-info-titulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(3rem, 12vw, 6rem);
+    letter-spacing: 8px;
+    margin: 0;
+    color: #f2c14e;
+    text-shadow: 3px 3px 0 #7a3b0c;
+}
+
+.c-info-subtitulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 4vw, 1.6rem);
+    margin: 0;
+}
+
+.c-info-autor {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+    margin: 8px 0 24px;
+    opacity: 0.85;
+}
+
+.c-info-momo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(180px, 45vw, 280px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #fdf3e1;
+    border: 6px solid #e8862a;
+    box-shadow: 0 0 0 6px #f2c14e;
+    overflow: hidden;
+    animation: c-info-flotar 3s ease-in-out infinite;
+}
+
+.c-info-momo img {
+    width: 85%;
+    height: auto;
+}
+
+@keyframes c-info-flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.c-info-momeza {
+    font-family: Impact, 'Arial Black', sans-serif;
+    font-size: clamp(2.5rem, 11vw, 5rem);
+    letter-spacing: 4px;
+    color: #f2c14e;
+    -webkit-text-stroke: 2px #7a3b0c;
+    text-shadow: 4px 4px 0 #1d3557;
+    margin: 20px 0 16px;
+}
+
+.c-info-medidor {
+    width: 420px;
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
+.c-info-medidor p {
+    margin: 0 0 6px;
+    font-weight: bold;
+}
+
+.c-info-barra {
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.c-info-barra-relleno {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #2b7bb9, #4f8a3b, #c0392b, #e8a33a);
+}
+
+.c-info-medidor .c-info-medidor-valor {
+    margin: 6px 0 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.c-info-caja {
+    background-color: rgba(29, 53, 87, 0.85);
+    border: 2px solid #f2c14e;
+    border-radius: 12px;
+    padding: 16px 20px;
+    max-width: 90%;
+    width: 420px;
+    margin-bottom: 16px;
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+}
+
+.c-info-caja p {
+    margin: 0;
+}
+
+.c-info-caja .c-info-caja-titulo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #f2c14e;
+    margin-bottom: 6px;
+}
+
+.c-info-link {
+    color: #fdf3e1;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    margin-top: 8px;
+}
+
+.c-info-version {
+    margin: 8px 0 0;
+    font-size: 1.1rem;
+}

@@ -1,0 +1,28 @@
+.c-menu {
+    background-color: #1d3557;
+    border-top: 3px solid #e8862a;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+}
+
+.c-menu a {
+    color: #fdf3e1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .c-menu {
+        gap: 8px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

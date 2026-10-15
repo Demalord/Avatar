@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background-color: #fdf3e1;
+    color: #2b2118;
+}
+
+img {
+    max-width: 100%;
+}
